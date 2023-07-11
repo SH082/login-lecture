@@ -17,13 +17,12 @@ function login() {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(req)
+        body: JSON.stringify(req),
     }).then((res) => res.json())
-        .then((res) => {
+      .then((res) => {
             if(res.success){
                 location.href="/";
-            }
-            else{
+            }else{
                 alert(res.msg);
             }
         })
